@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "DotAnimInstance.h"
+#include "FrutoDotItem.h"
+#include "FlorDotItem.h"
 #include "DotCharacter.generated.h"
 
 UCLASS()
@@ -33,6 +35,11 @@ public:
     void DotCrouch();
     void DotJump();
     void DotCrouchStop();
+    
+    UFUNCTION()
+    void OnOverlapBegin(UPrimitiveComponent* OverlappedComp,AActor* OtherActor,
+                        UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,
+                        const FHitResult& Sweep);
     
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State)
     UDotAnimInstance* animBP;

@@ -4,6 +4,7 @@
 #include "DotCharacter.h"
 #include "DotAnimInstance.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Animation/AnimInstance.h"
 #include "Math/UnrealMathUtility.h"
@@ -23,6 +24,9 @@ ADotCharacter::ADotCharacter()
         mc->bUseControllerDesiredRotation = false;
     flores=0;
     frutos=0;
+    UCapsuleComponent* capsula;
+    capsula=GetCapsuleComponent();
+    capsula->OnComponentBeginOverlap.AddDynamic(this, &ADotCharacter::OnOverlapBegin);
 }
 
 // Called when the game starts or when spawned
@@ -117,4 +121,25 @@ void ADotCharacter::DotJump()
 {
     animBP->isJumping=true;
     Jump();
+}
+
+void ADotCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp,AActor* OtherActor,
+                    UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,
+                    const FHitResult& Sweep)
+{
+    ADotItem* item;
+    item=Cast<ADotItem>(OtherActor);
+    if(item)
+    {
+        AFrutoDotItem* fruto=Cast<AFrutoDotItem>(item);
+        if(fruto)
+            frutos++;
+        else
+        {
+            AFlorDotItem* flor=Cast<AFlorDotItem>(item);
+            if(flor)
+                flores++;
+        }
+        item->Destroy();
+    }
 }
