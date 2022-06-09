@@ -7,6 +7,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/BoxComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "BehaviorTree/BehaviorTree.h"
 #include "Bird.generated.h"
 
 UCLASS()
@@ -31,4 +32,7 @@ public:
 
     UPROPERTY(VisibleAnywhere, BlueprintReadonly, Category="IA")
     UBoxComponent* attack_range;
+    
+    UPROPERTY(EditAnywhere, Category = "IA")
+    UBehaviorTree* behavior;
 };

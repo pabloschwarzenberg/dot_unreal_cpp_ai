@@ -12,7 +12,7 @@
 #include "BehaviorTree/BehaviorTreeComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "BehaviorTree/BehaviorTree.h"
-
+#include "Bird.h"
 #include "DotCharacter.h"
 #include "BirdAIController.generated.h"
 /**
@@ -26,20 +26,25 @@ class DOT_API ABirdAIController : public AAIController
 public:
     ABirdAIController();
     
+    virtual void OnPossess(APawn* InPawn) override;
+    
+    virtual void BeginPlay() override;
+    
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="AI")
     UAIPerceptionComponent* senses;
     
     UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="AI")
     UAISenseConfig_Sight* sightConfig;
-    
-    UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="AI")
-    UBehaviorTreeComponent* behaviorTree;
-
-    UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="AI")
-    UBlackboardComponent* sharedBlackboard;
-    
+        
     UFUNCTION()
     void PlayerSeen(AActor* actor, FAIStimulus stimulus);
-    
-    void BeginPlay() override;
+
+    UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="AI")
+    bool canSeePlayer;
+
+    UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="AI")
+    FVector location;
+     
+    UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="AI")
+    UBlackboardComponent* sharedBlackboard;
 };

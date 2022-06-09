@@ -13,20 +13,32 @@ ABirdAIController::ABirdAIController()
     sightConfig->DetectionByAffiliation.bDetectEnemies = true;
     sightConfig->DetectionByAffiliation.bDetectNeutrals = true;
     sightConfig->DetectionByAffiliation.bDetectFriendlies = true;
-    sightConfig->SetMaxAge(10.0f);
+    sightConfig->SetMaxAge(5.0f);
     senses->ConfigureSense(*sightConfig);
     senses->SetDominantSense(sightConfig->GetSenseImplementation());
 
-    behaviorTree=CreateDefaultSubobject<UBehaviorTreeComponent>("behaviour");
-
+    senses->OnTargetPerceptionUpdated.AddDynamic(this,&ABirdAIController::PlayerSeen);
+    
+    canSeePlayer=false;
+    location=FVector(0,0,0);
     sharedBlackboard=CreateDefaultSubobject<UBlackboardComponent>("sharedBlackboard");
 }
 
 void ABirdAIController::BeginPlay()
 {
     Super::BeginPlay();
-    if(ensure(senses))
-        senses->OnTargetPerceptionUpdated.AddDynamic(this,&ABirdAIController::PlayerSeen);
+}
+
+void ABirdAIController::OnPossess(APawn* InPawn)
+{
+    Super::OnPossess(InPawn);
+    
+    ABird* bird = Cast<ABird>(InPawn);
+    if(bird && bird->behavior)
+    {
+        sharedBlackboard->InitializeBlackboard(*bird->behavior->BlackboardAsset);
+        RunBehaviorTree(bird->behavior);
+    }
 }
 
 void ABirdAIController::PlayerSeen(AActor* actor, FAIStimulus stimulus)
@@ -36,17 +48,19 @@ void ABirdAIController::PlayerSeen(AActor* actor, FAIStimulus stimulus)
     dot=Cast<ADotCharacter>(actor);
     if(dot)
     {
+        sharedBlackboard->SetValueAsObject("Player",dot);
         if(stimulus.WasSuccessfullySensed())
         {
-            sharedBlackboard->SetValueAsObject("Player",dot);
-            sharedBlackboard->SetValueAsVector("Destination",stimulus.StimulusLocation);
-            sharedBlackboard->SetValueAsBool("CanSeePlayer",true);
+            location=stimulus.StimulusLocation;
+            canSeePlayer=true;
             UE_LOG(LogTemp,Warning,TEXT("IS Seen %f"),stimulus.GetAge());
         }
         else
         {
+            location=stimulus.StimulusLocation;
+            canSeePlayer=false;
             UE_LOG(LogTemp,Warning,TEXT("IS Lost %f"),stimulus.GetAge());
+            
         }
     }
 }
-

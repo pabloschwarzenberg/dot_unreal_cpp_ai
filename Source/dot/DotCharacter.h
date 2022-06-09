@@ -7,6 +7,8 @@
 #include "DotAnimInstance.h"
 #include "FrutoDotItem.h"
 #include "FlorDotItem.h"
+#include "Materials/MaterialParameterCollectionInstance.h"
+#include "Materials/MaterialParameterCollection.h"
 #include "DotCharacter.generated.h"
 
 UCLASS()
@@ -49,4 +51,10 @@ public:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State)
     int frutos;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State)
+    UMaterialParameterCollection* material_asset;
+    
+private:
+    UMaterialParameterCollectionInstance* material;
 };

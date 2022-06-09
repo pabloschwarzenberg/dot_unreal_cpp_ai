@@ -27,6 +27,7 @@ ADotCharacter::ADotCharacter()
     UCapsuleComponent* capsula;
     capsula=GetCapsuleComponent();
     capsula->OnComponentBeginOverlap.AddDynamic(this, &ADotCharacter::OnOverlapBegin);
+    material_asset=nullptr;
 }
 
 // Called when the game starts or when spawned
@@ -46,6 +47,8 @@ void ADotCharacter::BeginPlay()
         animBP->isMoving=false;
         animBP->isSwimming=false;
     }
+    if(material_asset)
+        material=GetWorld()->GetParameterCollectionInstance(material_asset);
 }
 
 // Called every frame
@@ -110,11 +113,15 @@ void ADotCharacter::MoveX(float delta)
 void ADotCharacter::DotCrouch()
 {
     animBP->isCrouching=true;
+    if(material)
+        material->SetScalarParameterValue(FName("Apariencia"), 0);
 }
 
 void ADotCharacter::DotCrouchStop()
 {
     animBP->isCrouching=false;
+    if(material)
+        material->SetScalarParameterValue(FName("Apariencia"), 1);
 }
 
 void ADotCharacter::DotJump()
