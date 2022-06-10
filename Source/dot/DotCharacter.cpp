@@ -130,6 +130,18 @@ void ADotCharacter::DotJump()
     Jump();
 }
 
+void ADotCharacter::OnMovementModeChanged(EMovementMode PrevMovementMode,uint8 PreviousCustomMode)
+{
+    UCharacterMovementComponent* cm;
+    Super::OnMovementModeChanged(PrevMovementMode,PreviousCustomMode);
+    cm=GetCharacterMovement();
+    if(cm)
+    {
+            if(PrevMovementMode==EMovementMode::MOVE_Falling and cm->MovementMode==EMovementMode::MOVE_Walking)
+                animBP->isJumping=false;
+    }
+}
+
 void ADotCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp,AActor* OtherActor,
                     UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,
                     const FHitResult& Sweep)

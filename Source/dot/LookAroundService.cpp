@@ -22,6 +22,5 @@ void ULookAroundService::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* Node
             aiController->sharedBlackboard->SetValueAsVector("Location",aiController->location);
         }
         lastCanSeePlayer=aiController->canSeePlayer;
-        UE_LOG(LogTemp, Warning, TEXT("Blackboard data is set"));
     }
 }

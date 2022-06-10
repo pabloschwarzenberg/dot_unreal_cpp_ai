@@ -55,6 +55,9 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State)
     UMaterialParameterCollection* material_asset;
     
+    UFUNCTION()
+    virtual void OnMovementModeChanged(EMovementMode PrevMovementMode,uint8 PreviousCustomMode) override;
+    
 private:
     UMaterialParameterCollectionInstance* material;
 };
