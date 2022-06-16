@@ -4,11 +4,14 @@
 #include "Caiman.h"
 
 // Sets default values
-ACaiman::ACaiman()
+ACaiman::ACaiman(const FObjectInitializer& oi)
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+    box=oi.CreateDefaultSubobject<UBoxComponent>(this,"Box");
+    RootComponent=box;
+    mesh=oi.CreateDefaultSubobject<UStaticMeshComponent>(this,"Mesh");
+    mesh->SetupAttachment(RootComponent);
 }
 
 // Called when the game starts or when spawned
