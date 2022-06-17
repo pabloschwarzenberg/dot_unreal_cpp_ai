@@ -12,13 +12,23 @@ ACaiman::ACaiman(const FObjectInitializer& oi)
     RootComponent=box;
     mesh=oi.CreateDefaultSubobject<UStaticMeshComponent>(this,"Mesh");
     mesh->SetupAttachment(RootComponent);
+    timeline=oi.CreateDefaultSubobject<UTimelineComponent>(this,"Timeline");
+    timeline->SetLooping(false);
+    InterpFunction.BindUFunction(this, FName{ TEXT("timelineAnimate") });
+    onTimelineFinishedCallback.BindUFunction(this, FName{ TEXT("timelineFinished") });
+    range=200;
+    direction=1;
 }
 
 // Called when the game starts or when spawned
 void ACaiman::BeginPlay()
 {
 	Super::BeginPlay();
-	
+    if(curve)
+    {
+        timeline->AddInterpFloat(curve, InterpFunction, FName{ TEXT("AnimateXYZ") });
+        timeline->PlayFromStart();
+    }
 }
 
 // Called every frame
@@ -35,3 +45,23 @@ void ACaiman::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void ACaiman::timelineAnimate(float val)
+{
+    FVector target=GetActorLocation()+FVector(direction*val*range,0,0);
+    
+    SetActorLocation(target);
+}
+
+void ACaiman::timelineFinished()
+{
+    direction*=-1;
+    if(direction==-1)
+    {
+        mesh->SetWorldRotation(FRotator(0,180,0));
+    }
+    else
+    {
+        mesh->SetWorldRotation(FRotator(0,0,0));
+    }
+    timeline->PlayFromStart();
+}

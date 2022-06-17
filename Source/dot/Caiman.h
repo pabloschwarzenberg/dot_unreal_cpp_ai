@@ -6,6 +6,8 @@
 #include "GameFramework/Pawn.h"
 #include "Components/BoxComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Components/TimelineComponent.h"
+#include "Curves/CurveFloat.h"
 #include "Caiman.generated.h"
 
 UCLASS()
@@ -33,4 +35,25 @@ public:
     
     UPROPERTY(VisibleAnywhere, BlueprintReadonly, Category="Character")
     UStaticMeshComponent* mesh;
+    
+    UPROPERTY()
+    UTimelineComponent* timeline;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Character")
+    UCurveFloat* curve;
+
+    FOnTimelineFloat InterpFunction{};
+    FOnTimelineEventStatic onTimelineFinishedCallback{};
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Character")
+    float range;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Character")
+    int direction;
+    
+    UFUNCTION()
+    void timelineAnimate(float val);
+    
+    UFUNCTION()
+    void timelineFinished();
 };
