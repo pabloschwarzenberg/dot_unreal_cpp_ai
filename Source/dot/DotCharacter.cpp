@@ -28,6 +28,7 @@ ADotCharacter::ADotCharacter()
     capsula=GetCapsuleComponent();
     capsula->OnComponentBeginOverlap.AddDynamic(this, &ADotCharacter::OnOverlapBegin);
     material_asset=nullptr;
+    isCamouflaged=false;
 }
 
 // Called when the game starts or when spawned
@@ -114,14 +115,20 @@ void ADotCharacter::DotCrouch()
 {
     animBP->isCrouching=true;
     if(material)
+    {
         material->SetScalarParameterValue(FName("Apariencia"), 0);
+        isCamouflaged=true;
+    }
 }
 
 void ADotCharacter::DotCrouchStop()
 {
     animBP->isCrouching=false;
     if(material)
+    {
         material->SetScalarParameterValue(FName("Apariencia"), 1);
+        isCamouflaged=false;
+    }
 }
 
 void ADotCharacter::DotJump()

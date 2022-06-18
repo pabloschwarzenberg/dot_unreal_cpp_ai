@@ -7,17 +7,19 @@
 ACaiman::ACaiman(const FObjectInitializer& oi)
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
     box=oi.CreateDefaultSubobject<UBoxComponent>(this,"Box");
     RootComponent=box;
     mesh=oi.CreateDefaultSubobject<UStaticMeshComponent>(this,"Mesh");
     mesh->SetupAttachment(RootComponent);
     timeline=oi.CreateDefaultSubobject<UTimelineComponent>(this,"Timeline");
-    timeline->SetLooping(false);
     InterpFunction.BindUFunction(this, FName{ TEXT("timelineAnimate") });
     onTimelineFinishedCallback.BindUFunction(this, FName{ TEXT("timelineFinished") });
     range=200;
     direction=1;
+    duration=10;
+    speed=1;
+    start=GetActorLocation();
 }
 
 // Called when the game starts or when spawned
@@ -26,7 +28,12 @@ void ACaiman::BeginPlay()
 	Super::BeginPlay();
     if(curve)
     {
+        start=GetActorLocation();
+        timeline->SetLooping(false);
         timeline->AddInterpFloat(curve, InterpFunction, FName{ TEXT("AnimateXYZ") });
+        timeline->SetTimelineLength(duration);
+        timeline->SetPlayRate(speed);
+        timeline->SetTimelineFinishedFunc(onTimelineFinishedCallback);
         timeline->PlayFromStart();
     }
 }
@@ -35,7 +42,6 @@ void ACaiman::BeginPlay()
 void ACaiman::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
@@ -47,21 +53,16 @@ void ACaiman::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void ACaiman::timelineAnimate(float val)
 {
-    FVector target=GetActorLocation()+FVector(direction*val*range,0,0);
+    FVector target;
     
+    target=start+FVector(direction*val*range,0,0);
+        
     SetActorLocation(target);
 }
 
 void ACaiman::timelineFinished()
 {
     direction*=-1;
-    if(direction==-1)
-    {
-        mesh->SetWorldRotation(FRotator(0,180,0));
-    }
-    else
-    {
-        mesh->SetWorldRotation(FRotator(0,0,0));
-    }
+    start=GetActorLocation();
     timeline->PlayFromStart();
 }

@@ -20,7 +20,7 @@ ABird::ABird(const FObjectInitializer& oi)
 void ABird::BeginPlay()
 {
 	Super::BeginPlay();
-	
+    nest=GetActorLocation();
 }
 
 // Called every frame

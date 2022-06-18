@@ -58,6 +58,8 @@ public:
     UFUNCTION()
     virtual void OnMovementModeChanged(EMovementMode PrevMovementMode,uint8 PreviousCustomMode) override;
     
+    bool isCamouflaged;
+    
 private:
     UMaterialParameterCollectionInstance* material;
 };

@@ -50,10 +50,19 @@ public:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Character")
     int direction;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Character")
+    int duration;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Character")
+    int speed;
     
     UFUNCTION()
     void timelineAnimate(float val);
     
     UFUNCTION()
     void timelineFinished();
+    
+private:
+    FVector start;
 };

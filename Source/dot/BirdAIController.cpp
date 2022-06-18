@@ -49,18 +49,16 @@ void ABirdAIController::PlayerSeen(AActor* actor, FAIStimulus stimulus)
     if(dot)
     {
         sharedBlackboard->SetValueAsObject("Player",dot);
-        if(stimulus.WasSuccessfullySensed())
+        if(stimulus.WasSuccessfullySensed() && !dot->isCamouflaged)
         {
-            location=stimulus.StimulusLocation;
             canSeePlayer=true;
-            UE_LOG(LogTemp,Warning,TEXT("IS Seen %f"),stimulus.GetAge());
+            location=stimulus.StimulusLocation;
         }
         else
         {
-            location=stimulus.StimulusLocation;
+            ABird* bird=Cast<ABird>(GetPawn());
             canSeePlayer=false;
-            UE_LOG(LogTemp,Warning,TEXT("IS Lost %f"),stimulus.GetAge());
-            
+            location=bird->nest;
         }
     }
 }

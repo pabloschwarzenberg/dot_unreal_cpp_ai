@@ -35,4 +35,6 @@ public:
     
     UPROPERTY(EditAnywhere, Category = "IA")
     UBehaviorTree* behavior;
+    
+    FVector nest;
 };
