@@ -58,11 +58,14 @@ void AIsland::Create()
         UE_LOG(LogTemp, Fatal, TEXT("Fallo en la creacion del generador"));
 
     generador->build();
-
-    exito = FFileHelper::SaveStringToFile(generador->serialize(), *(FPaths::ProjectDir() + TEXT("level.txt")),
-        FFileHelper::EEncodingOptions::AutoDetect, &IFileManager::Get(), EFileWrite::FILEWRITE_NoFail);
-    if (!exito)
-        UE_LOG(LogTemp, Warning, TEXT("No se pudo grabar el layout"));
+    
+    if(!logfile.IsEmpty())
+    {
+        exito = FFileHelper::SaveStringToFile(generador->serialize(), *(FPaths::ProjectDir() + logfile),
+            FFileHelper::EEncodingOptions::AutoDetect, &IFileManager::Get(), EFileWrite::FILEWRITE_NoFail);
+        if (!exito)
+            UE_LOG(LogTemp, Warning, TEXT("No se pudo grabar el layout"));
+    }
 
     bricks = new ABrick**[cells];
     if (bricks == nullptr)

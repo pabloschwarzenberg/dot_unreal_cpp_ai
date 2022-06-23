@@ -36,6 +36,9 @@ protected:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PCG")
     float brick_size;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PCG")
+    FString logfile;
+    
     void Create();
 
 private:
