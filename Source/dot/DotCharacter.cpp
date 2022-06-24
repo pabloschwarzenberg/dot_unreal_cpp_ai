@@ -6,6 +6,7 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "Animation/AnimInstance.h"
 #include "Math/UnrealMathUtility.h"
 #include "Math/Vector.h"
@@ -19,6 +20,9 @@ ADotCharacter::ADotCharacter()
     bUseControllerRotationYaw = false;
     bUseControllerRotationPitch = false;
     bUseControllerRotationRoll = false;
+    auto loader=
+    ConstructorHelpers::FObjectFinder<USoundBase>(TEXT("SoundWave'/Game/Sound/dot_jump.dot_jump'"));
+    fx_salto=loader.Object;
     UCharacterMovementComponent* mc = GetCharacterMovement();
     if (mc)
         mc->bUseControllerDesiredRotation = false;
@@ -134,6 +138,8 @@ void ADotCharacter::DotCrouchStop()
 void ADotCharacter::DotJump()
 {
     animBP->isJumping=true;
+    if(fx_salto!=nullptr)
+        UGameplayStatics::PlaySoundAtLocation(this,fx_salto,GetActorLocation());
     Jump();
 }
 

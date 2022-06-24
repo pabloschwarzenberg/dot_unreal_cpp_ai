@@ -9,6 +9,7 @@
 #include "FlorDotItem.h"
 #include "Materials/MaterialParameterCollectionInstance.h"
 #include "Materials/MaterialParameterCollection.h"
+#include "Sound/SoundBase.h"
 #include "DotCharacter.generated.h"
 
 UCLASS()
@@ -62,4 +63,6 @@ public:
     
 private:
     UMaterialParameterCollectionInstance* material;
+    
+    USoundBase* fx_salto;
 };
