@@ -105,7 +105,7 @@ void ADotCharacter::MoveX(float delta)
         FVector fwd = GetActorForwardVector();
         USkeletalMeshComponent* mesh;
         mesh=GetMesh();
-        AddMovementInput(fwd,delta);
+        AddMovementInput(fwd,delta*2);
         animBP->isMoving=true;
         if (delta>0) {
             mesh->SetWorldRotation(FRotator(0,-90,0));
