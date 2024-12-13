@@ -1,0 +1,1 @@
+/Users/Shared/Epic\ Games/UE_5.5/Engine/Build/BatchFiles/Mac/Build.sh /Users/psr/Documents/dot_unreal_cpp_ai/dot.uproject -VSCode

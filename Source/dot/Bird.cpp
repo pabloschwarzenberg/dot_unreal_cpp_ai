@@ -9,7 +9,7 @@ ABird::ABird(const FObjectInitializer& oi)
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
     UCapsuleComponent* capsula;
 	PrimaryActorTick.bCanEverTick = true;
-    attack_range=oi.CreateDefaultSubobject<UBoxComponent>(this,"Attack Range");
+    attack_range=oi.CreateDefaultSubobject<UBoxComponent>(this,"Attack range");
     attack_range->SetBoxExtent(FVector(3,3,3));
     attack_range->SetupAttachment(RootComponent);
     capsula=GetCapsuleComponent();

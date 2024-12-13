@@ -1,0 +1,290 @@
+[
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Bird.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Bird.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/BirdAIController.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/BirdAIController.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/BoolConditionDecorator.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/BoolConditionDecorator.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Brick.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Brick.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Caiman.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Caiman.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/DotAnimInstance.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/DotAnimInstance.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/DotCharacter.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/DotCharacter.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/DotHUD.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/DotHUD.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/DotItem.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/DotItem.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/FlorDotItem.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/FlorDotItem.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/FlyToTask.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/FlyToTask.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/FrutoDotItem.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/FrutoDotItem.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Graph.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Graph.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Grid.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Grid.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Island.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Island.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/LookAroundService.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/LookAroundService.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/Queue.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/dot.Build.cs",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/dot.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	},
+	{
+		"file": "/Users/psr/Documents/dot_unreal_cpp_ai/Source/dot/dot.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/psr/Documents/dot_unreal_cpp_ai/.vscode/compileCommands_dot/dot.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.5/Engine/Source"
+	}
+]
