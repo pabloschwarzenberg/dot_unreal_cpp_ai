@@ -7,8 +7,10 @@
 using namespace std;
 
 void error_fatal(const char* s)
-{
-    UE_LOG(LogTemp, Fatal, TEXT("%s\n"), s);
+{   
+    FString mensaje(s);
+    //UE_LOG(LogTemp, Fatal, TEXT("%s"),mensaje.GetCharArray().GetData());
+    UE_LOG(LogTemp, Fatal, TEXT("%hs"),s);
 }
 
 bool operator<(Node a, Node b)
